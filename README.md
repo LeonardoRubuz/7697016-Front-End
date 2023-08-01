@@ -12,4 +12,4 @@ Dans le cas contraire vous pouvez installer les dépendances de ce projet avec `
 
 
 ## Partie personnelle
-Ce projet est un exercice de maîtrise des pages interactives avec JavaScript par OpenClassroom
+Ce projet est un exercice de maîtrise des pages interactives avec JavaScript par OpenClassroom.
