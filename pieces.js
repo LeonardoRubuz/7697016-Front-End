@@ -53,3 +53,11 @@ for (let i = 0; i < pieces.length; i++) {
 }
 
 
+// Ajout des évènements sur les bouttons
+const boutonTrier = document.querySelector(".btn-trier");
+boutonTrier.addEventListener("click", () => {
+    pieces.sort((a,b) => {
+        return a.prix - b.prix;
+    });
+    console.log(pieces);
+});
