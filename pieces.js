@@ -27,7 +27,11 @@ for (let i = 0; i < pieces.length; i++) {
 
     const dispoElement = document.createElement("p");
     dispoElement.innerText = `${article.disponibilite ? "En stock" : "Rupture de stock"}`;
-    
+    if (article.disponibilite) {
+        dispoElement.style.color='lightgreen';
+    } else {
+        dispoElement.style.color='red';  
+    }
     // Création d'un élément "card"
     const pieceElement = document.createElement("article")
     
