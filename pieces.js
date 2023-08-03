@@ -17,6 +17,9 @@ prixElement.innerText  = `Prix: ${article.prix} (${article.prix < 35 ? "€" : "
 const categorieElement = document.createElement("p");
 categorieElement.innerText = article.categorie ?? "(aucune catégorie)";
 
+const descriptionElement = document.createElement("p");
+descriptionElement.innerText = article.description ?? "(Pas de description pour le moment)"
+
 // Rattachement des éléments dans le document
 
 const sectionFiches = document.querySelector(".fiches");
