@@ -12,7 +12,7 @@
         "id": 2,
         "nom": "Plaquettes de frein (x4)",
         "prix": 40,
-        "image" : "images/.png",
+        "image" : "images/plaquettes-frein.png",
         "categorie": "Freinage",
         "description" : "Une qualité de freinage optimale, par tous les temps.",
         "disponibilite" : true
@@ -21,7 +21,7 @@
         "id": 3,
         "nom": "Ampoule boîte à gants",
         "prix": 5.49,
-        "image" : "images/.png",
+        "image" : "images/ampoule-boite-a-gants.png",
         "categorie": "Optiques",
         "description" : "Pour y voir clair dans l'habitacle.",
         "disponibilite" : false
@@ -30,7 +30,7 @@
         "id": 4,
         "nom": "Liquide de frein",
         "prix": 9.60,
-        "image" : "images/.png",
+        "image" : "images/liquide-frein.png",
         "categorie": "Freinage",
         "disponibilite" : true
     },
@@ -38,7 +38,7 @@
         "id": 5,
         "nom": "Balai d'essuie-glace",
         "prix": 29.10,
-        "image" : "images/.png",
+        "image" : "images/balai-essuie-glace.png",
         "description" : "Performances d'essuyage au top ! Longueur : 550mm",
         "disponibilite" : true
     }
