@@ -2,6 +2,9 @@
 const reponse = await fetch("pieces-autos.json");
 const pieces = await reponse.json();
 
+// Sélection de la section fiche
+const sectionFiches = document.querySelector(".fiches");
+
 // Création des éléments
 for (let i = 0; i < pieces.length; i++) {
     
@@ -28,19 +31,21 @@ for (let i = 0; i < pieces.length; i++) {
     // Création d'un élément "card"
     const pieceElement = document.createElement("article")
     
-    // Rattachement des éléments dans le document
-    
+    // Rattachement des éléments dans la balise 'article'
+    let elementsList = [
+        imageElement,
+        nomElement,
+        prixElement,
+        categorieElement,
+        descriptionElement,
+        dispoElement
+    ]
+    for (let element of elementsList) {
+        pieceElement.appendChild(element);
+    }
+
+    // Rattachement de chaque article dans la section fiche
+    sectionFiches.appendChild(pieceElement);
 }
 
-const sectionFiches = document.querySelector(".fiches");
-let elementsList = [
-    imageElement,
-    nomElement,
-    prixElement,
-    categorieElement,
-    descriptionElement,
-    dispoElement
-]
-for (let element of elementsList) {
-    sectionFiches.appendChild(element);
-}
+
