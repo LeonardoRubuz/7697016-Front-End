@@ -65,5 +65,8 @@ boutonTrier.addEventListener("click", () => {
 
 const boutonFiltrer = document.querySelector(".btn-filtrer");
 boutonFiltrer.addEventListener("click", () => {
-    
+    const piecesFiltrees = pieces.filter(function (piece) {
+        return piece.prix <= 35;
+    });
+    console.log(piecesFiltrees);
 })
