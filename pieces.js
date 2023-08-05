@@ -56,8 +56,14 @@ for (let i = 0; i < pieces.length; i++) {
 // Ajout des évènements sur les bouttons
 const boutonTrier = document.querySelector(".btn-trier");
 boutonTrier.addEventListener("click", () => {
-    pieces.sort((a,b) => {
+    const piecesOrdonnees = Array.from(pieces);
+    piecesOrdonnees.sort((a,b) => {
         return a.prix - b.prix;
     });
-    console.log(pieces);
+    console.log(piecesOrdonnees);
 });
+
+const boutonFiltrer = document.querySelector(".btn-filtrer");
+boutonFiltrer.addEventListener("click", () => {
+    
+})
