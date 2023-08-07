@@ -71,3 +71,12 @@ boutonFiltrer.addEventListener("click", () => {
     console.log(piecesFiltrees);
 });
 
+// Boutton d'affichage par ordre décroissant
+const boutonDecroissant = document.querySelector(".btn-decroissant");
+boutonTrier.addEventListener("click", () => {
+    const piecesDecroissant = Array.from(pieces);
+    piecesDecroissant.sort((a,b) => {
+        return b.prix - a.prix;
+    });
+    console.log(piecesDecroissant);
+});
