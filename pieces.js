@@ -89,3 +89,23 @@ boutonDescription.addEventListener("click", () => {
     });
     console.log(piecesDescription);
 });
+
+// Création de la liste des noms des pièces
+const noms = pieces.map(piece => piece.nom);
+for (let i = pieces.length - 1 ; i >= 0; i--) {
+    if (pieces[i].prix > 35) {
+        noms.splice(i,1)
+    }   
+}
+
+// Création de la liste d'éléments abordables
+const elementsAbordables = document.createElement('ul');
+// Ajout de chaque nom à la liste
+for (let i = 0; i < noms.length; i++) {
+    const nomElement = document.createElement('li');
+    nomElement.innerText = noms[i];
+    elementsAbordables.appendChild(nomElement)
+    
+}
+
+document.qu
