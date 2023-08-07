@@ -90,11 +90,19 @@ boutonDescription.addEventListener("click", () => {
     console.log(piecesDescription);
 });
 
-// Création de la liste des noms des pièces
+// Création de la liste des noms des pièces abordables
 const noms = pieces.map(piece => piece.nom);
 for (let i = pieces.length - 1 ; i >= 0; i--) {
     if (pieces[i].prix > 35) {
         noms.splice(i,1)
+    }   
+}
+
+// Création de la liste des prix des pièces abordables
+const prix = pieces.map(piece => piece.prix);
+for (let i = pieces.length - 1 ; i >= 0; i--) {
+    if (pieces[i].prix > 35) {
+        prix.splice(i,1)
     }   
 }
 
@@ -103,9 +111,9 @@ const elementsAbordables = document.createElement('ul');
 // Ajout de chaque nom à la liste
 for (let i = 0; i < noms.length; i++) {
     const nomElement = document.createElement('li');
-    nomElement.innerText = noms[i];
+    nomElement.innerText = noms[i] +' - ' + prix[i]+'€';
     elementsAbordables.appendChild(nomElement)
     
 }
 
-document.querySelector(".abordables").appendChild(elementsAbordables)
+document.querySelector(".abordables").appendChild(elementsAbordables);
