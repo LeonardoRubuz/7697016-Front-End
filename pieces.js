@@ -71,12 +71,21 @@ boutonFiltrer.addEventListener("click", () => {
     console.log(piecesFiltrees);
 });
 
-// Boutton d'affichage par ordre décroissant
+// Bouton d'affichage par ordre décroissant
 const boutonDecroissant = document.querySelector(".btn-decroissant");
-boutonTrier.addEventListener("click", () => {
+boutonDecroissant.addEventListener("click", () => {
     const piecesDecroissant = Array.from(pieces);
     piecesDecroissant.sort((a,b) => {
         return b.prix - a.prix;
     });
     console.log(piecesDecroissant);
+});
+
+// Bouton d'affichage d'élément avec description
+const boutonDescription = document.querySelector(".btn-description");
+boutonDescription.addEventListener("click", () => {
+    const piecesDescription = pieces.filter(function (piece) {
+        return piece.description;
+    });
+    console.log(piecesDescription);
 });
