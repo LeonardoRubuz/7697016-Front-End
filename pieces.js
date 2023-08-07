@@ -108,4 +108,4 @@ for (let i = 0; i < noms.length; i++) {
     
 }
 
-document.qu
+document.querySelector(".abordables").appendChild(elementsAbordables)
