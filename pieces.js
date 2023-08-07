@@ -69,4 +69,5 @@ boutonFiltrer.addEventListener("click", () => {
         return piece.prix <= 35;
     });
     console.log(piecesFiltrees);
-})
+});
+
