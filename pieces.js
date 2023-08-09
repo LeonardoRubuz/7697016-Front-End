@@ -52,6 +52,7 @@ for (let i = 0; i < pieces.length; i++) {
     sectionFiches.appendChild(pieceElement);
 }
 
+document.querySelector(".fiches").innerHTML = ""
 
 // Ajout des évènements sur les bouttons
 const boutonTrier = document.querySelector(".btn-trier");
