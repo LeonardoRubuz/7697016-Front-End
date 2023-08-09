@@ -1,6 +1,5 @@
 // Récupération des pièces depuis le fichier JSON
-const reponse = await fetch("pieces-autos.json");
-const pieces = await reponse.json();
+const pieces = await fetch("pieces-autos.json").then(pieces => pieces.json());
 
 // Sélection de la section fiche
 const sectionFiches = document.querySelector(".fiches");
