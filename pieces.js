@@ -5,6 +5,7 @@ const pieces = await fetch("pieces-autos.json").then(pieces => pieces.json());
 const sectionFiches = document.querySelector(".fiches");
 
 // Création des éléments
+/*
 for (let i = 0; i < pieces.length; i++) {
     
     const article = pieces[i];
@@ -50,30 +51,33 @@ for (let i = 0; i < pieces.length; i++) {
     // Rattachement de chaque article dans la section fiche
     sectionFiches.appendChild(pieceElement);
 }
-
-document.querySelector(".fiches").innerHTML = ""
+*/
+sectionFiches.innerHTML = "";
 
 // Nouvelle fonction de création d'éléments
-function generePieces(pieces) {
+function genererPieces(pieces) {
     for (let i = 0; i < pieces.length; i++) {
         const pieceElement = document.createElement("article");
         const imageElement = document.createElement("img");
         imageElement.src = pieces[i].image;
         pieceElement.appendChild(imageElementElement);
-        document.body.appendChild(pieceElement);
+        sectionFiches.appendChild(pieceElement);
     }
 }
 
-//
+//Premier affichage
+genererPieces(pieces);
 
 // Ajout des évènements sur les bouttons
 const boutonTrier = document.querySelector(".btn-trier");
 boutonTrier.addEventListener("click", () => {
     const piecesOrdonnees = Array.from(pieces);
     piecesOrdonnees.sort((a,b) => {
-        return a.prix - b.prix;
+        return b.prix - a.prix;
     });
     console.log(piecesOrdonnees);
+    document.querySelector('.fiches').innerHTML ="";
+    genererPieces(piecesOrdonnees)
 });
 
 const boutonFiltrer = document.querySelector(".btn-filtrer");
