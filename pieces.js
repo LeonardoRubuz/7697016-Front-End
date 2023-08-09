@@ -53,6 +53,19 @@ for (let i = 0; i < pieces.length; i++) {
 
 document.querySelector(".fiches").innerHTML = ""
 
+// Nouvelle fonction de création d'éléments
+function generePieces(pieces) {
+    for (let i = 0; i < pieces.length; i++) {
+        const pieceElement = document.createElement("article");
+        const imageElement = document.createElement("img");
+        imageElement.src = pieces[i].image;
+        pieceElement.appendChild(imageElementElement);
+        document.body.appendChild(pieceElement);
+    }
+}
+
+//
+
 // Ajout des évènements sur les bouttons
 const boutonTrier = document.querySelector(".btn-trier");
 boutonTrier.addEventListener("click", () => {
