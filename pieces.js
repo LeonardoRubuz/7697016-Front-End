@@ -23,6 +23,11 @@ function genererPieces(pieces){
         descriptionElement.innerText = article.description ?? "Pas de description pour le moment.";
         const stockElement = document.createElement("p");
         stockElement.innerText = article.disponibilite ? "En stock" : "Rupture de stock";
+        if (article.disponibilite) {
+            stockElement.style.color = 'lightgreen';
+        } else {
+            stockElement.style.color = 'red';
+        }
         
         // On rattache la balise article a la section Fiches
         sectionFiches.appendChild(pieceElement);
